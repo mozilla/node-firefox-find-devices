@@ -12,14 +12,14 @@ module.exports = findDevices;
 var B2G_TEST_COMMAND = 'test -f /system/b2g/b2g; echo $?';
 
 function findDevices() {
-  var client = adb.createClient();
+  var adbClient = adb.createClient();
 
-  return client.listDevices().then(function(devices) {
+  return adbClient.listDevices().then(function(devices) {
 
     return Promise.all(devices.map(function(device) {
 
       // Test for Firefox OS on devices, annotate the device list with result.
-      return client.shell(device.id, B2G_TEST_COMMAND)
+      return adbClient.shell(device.id, B2G_TEST_COMMAND)
         .then(adb.util.readAll)
         .then(function(output) {
           // This is counterintuitive: The command result is the exit code,
