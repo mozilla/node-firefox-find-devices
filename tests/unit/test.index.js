@@ -65,6 +65,7 @@ module.exports = {
       var foundAndroid = false;
 
       results.forEach(function(result) {
+        test.ok(!('isFirefoxOS' in result));
         if (result.id === fxosId) {
           foundFirefoxOS = true;
         }

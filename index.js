@@ -35,6 +35,9 @@ function findDevices() {
     // Filter out all but the Firefox OS devices
     return devices.filter(function(device) {
       return device.isFirefoxOS;
+    }).map(function(device) {
+      delete device.isFirefoxOS;
+      return device;
     });
 
   });
