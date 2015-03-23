@@ -51,6 +51,12 @@ findDevices().then(function(results) {
 });
 ```
 
+Example output:
+
+```
+[ { id: '3739ce99', type: 'device', isFirefoxOS: true } ]
+```
+
 ## Running the tests
 
 After installing, you can simply run the following from the module folder:
