@@ -7,7 +7,7 @@
 This is part of the [node-firefox](https://github.com/mozilla/node-firefox) project.
 
 When Firefox OS devices are plugged in via USB, they can be found using the
-Android Debug Bridge. Once found, a test for the presence of Firefox OS on the
+[Android Debug Bridge][Android SDK]. Once found, a test for the presence of Firefox OS on the
 device can separate them from normal Android devices.
 
 ## Installation
@@ -33,6 +33,10 @@ npm install
 ```bash
 npm install node-firefox-find-devices
 ```
+
+> You need Android Debug Bridge (ADB) installed to use this module. You can install it via the [Android SDK][Android SDK] or via `brew install android-sdk`, running `android`, then installing "Android SDK Platform-tools" on Mac OS X.
+
+[Android SDK]: https://developer.android.com/sdk/index.html
 
 ## Usage
 
